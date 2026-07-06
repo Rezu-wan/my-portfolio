@@ -98,8 +98,14 @@ export default function Home() {
       <nav className="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-purple-500/20">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <a href="#" className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              RT
+            <a href="#" className="hover:scale-105 transition-transform">
+              <Image
+                src="/logo.svg"
+                alt="RT Logo"
+                width={120}
+                height={36}
+                className="w-auto"
+              />
             </a>
             <div className="flex gap-6">
               {["About", "Projects", "Skills", "Contact"].map((item) => (
@@ -346,6 +352,15 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-purple-500/20">
         <div className="max-w-6xl mx-auto text-center text-gray-500">
+          <div className="flex justify-center mb-4">
+            <Image
+              src="/logo.svg"
+              alt="RT Logo"
+              width={100}
+              height={30}
+              className="w-auto opacity-80 hover:opacity-100 transition-opacity"
+            />
+          </div>
           <p>
             © {new Date().getFullYear()} Md Rezuwan Tahmed Rezu-wan. Built with Next.js & Tailwind CSS.
           </p>
