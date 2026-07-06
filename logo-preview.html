@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logo Preview</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1e1b4b;
+            margin: 0;
+            gap: 40px;
+        }
+        .logo-container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .dark-version {
+            background: #1e1b4b;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none" width="200" height="60">
+            <defs>
+                <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#a855f7"/>
+                    <stop offset="100%" style="stop-color:#ec4899"/>
+                </linearGradient>
+            </defs>
+            <text x="50" y="42" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="url(#grad)">RT</text>
+            <rect x="50" y="50" width="100" height="3" rx="1.5" fill="url(#grad)" opacity="0.6"/>
+        </svg>
+        <p style="text-align:center;color:#666;margin-top:20px;font-size:14px;">Light Background</p>
+    </div>
+
+    <div class="logo-container dark-version">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none" width="200" height="60">
+            <defs>
+                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#a855f7"/>
+                    <stop offset="100%" style="stop-color:#ec4899"/>
+                </linearGradient>
+            </defs>
+            <text x="50" y="42" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="url(#grad2)">RT</text>
+            <rect x="50" y="50" width="100" height="3" rx="1.5" fill="url(#grad2)" opacity="0.6"/>
+        </svg>
+        <p style="text-align:center;color:#999;margin-top:20px;font-size:14px;">Dark Background</p>
+    </div>
+</body>
+</html>
