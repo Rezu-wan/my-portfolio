@@ -410,7 +410,7 @@ export default function Home() {
       <footer className="py-6 sm:py-8 px-4 sm:px-6 border-t border-purple-500/20">
         <div className="max-w-6xl mx-auto text-center text-gray-500">
           <p className="text-xs sm:text-sm">
-            © {new Date().getFullYear()} Md Rezuwan Tahmed Rezu-wan. Built with Next.js & Tailwind CSS.
+            © {new Date().getFullYear()} Md Rezuwan Tahmed. Built with Next.js & Tailwind CSS.
           </p>
           <p className="mt-1 sm:mt-2 text-xs sm:text-sm">
             <a href={GITHUB_URL} className="text-purple-400 hover:text-purple-300 transition-colors">
