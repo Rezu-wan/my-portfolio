@@ -86,11 +86,24 @@ const SOCIALS = [
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showAllProjects, setShowAllProjects] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  // Show fewer projects on mobile by default
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 640);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const displayedProjects = (!isMobile || showAllProjects) ? PROJECTS : PROJECTS.slice(0, 3);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -266,7 +279,7 @@ export default function Home() {
           </h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            {PROJECTS.map((project) => (
+            {displayedProjects.map((project) => (
               <a
                 key={project.id}
                 href={project.url}
@@ -297,7 +310,15 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-8 sm:mt-12">
+          <div className="text-center mt-8 sm:mt-12 space-y-4">
+            {/* Show More/Less button for mobile */}
+            <button
+              onClick={() => setShowAllProjects(!showAllProjects)}
+              className="md:hidden px-6 py-3 bg-slate-800/50 border border-purple-500/30 rounded-full text-sm font-medium hover:bg-purple-500/10 transition-colors"
+            >
+              {showAllProjects ? 'Show Less' : `Show More (${PROJECTS.length - 3} more)`}
+            </button>
+
             <a
               href={GITHUB_URL}
               target="_blank"
