@@ -1,18 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
   <defs>
     <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#a855f7"/>
-      <stop offset="100%" style="stop-color:#ec4899"/>
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
     </linearGradient>
   </defs>
 
-  <!-- Simple RT text with subtle underline accent -->
   <text x="50" y="42"
         font-family="Arial, sans-serif"
         font-size="36"
         font-weight="bold"
         fill="url(#grad)">RT</text>
 
-  <!-- Subtle accent line -->
   <rect x="50" y="50" width="100" height="3" rx="1.5" fill="url(#grad)" opacity="0.6"/>
 </svg>

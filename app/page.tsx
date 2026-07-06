@@ -102,9 +102,9 @@ export default function Home() {
               <img
                 src="/logo.svg"
                 alt="RT Logo"
-                width="100"
-                height="30"
-                className="w-auto"
+                width="120"
+                height="36"
+                style={{ width: '120px', height: 'auto', display: 'block' }}
               />
             </a>
             <div className="flex gap-6">
