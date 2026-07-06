@@ -81,7 +81,7 @@ const SKILLS = [
 // Social links
 const SOCIALS = [
   { name: "GitHub", url: GITHUB_URL, icon: "🐙" },
-  { name: "Email", url: "mailto:rezuwan@example.com", icon: "📧" }
+  { name: "Email", url: "mailto:rezuwantahmed@gmail.com", icon: "📧" }
 ];
 
 export default function Home() {
