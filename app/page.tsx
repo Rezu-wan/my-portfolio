@@ -99,11 +99,11 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <a href="#" className="hover:scale-105 transition-transform">
-              <Image
+              <img
                 src="/logo.svg"
                 alt="RT Logo"
-                width={100}
-                height={30}
+                width="100"
+                height="30"
                 className="w-auto"
               />
             </a>
